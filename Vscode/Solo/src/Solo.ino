@@ -18,21 +18,20 @@
 // Declaração de bibliotecas
 #include "libs/NRF24L01_BIBLIOTECA.h"
 
-const byte address[6] = "00002";
- bool notSent = false;
+bool notSent = false;
 
 void setup() {
   Serial.begin(9600);
 
   radio.begin();
-  radio.openReadingPipe(0, address); 
+  radio.openReadingPipe(0, endereco[0]); 
   radio.setPALevel(RF24_PA_HIGH);
 }
 
 void loop() {
-   if(!notSent){
-     Serial.println("\nINICIADO!");
-     notSent = true;
-   }
+  if(!notSent){
+    Serial.println("\nINICIADO!");
+    notSent = true;
+  }
   readMessage();
 }

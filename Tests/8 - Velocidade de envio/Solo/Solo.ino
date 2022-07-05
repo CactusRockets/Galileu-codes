@@ -11,6 +11,8 @@
     - 13 (19): SCK (NRF)
     - 08 (14): CSN (NRF)
     - 07 (13): CE (NRF)
+    
+    - 04 (06): ON_BUTTON (Botão de ativação do paraquedas)
 */
 
 // Declaração de bibliotecas
@@ -21,8 +23,9 @@ bool notSent = false;
 void setup() {
   Serial.begin(9600);
 
-  longRangeSettings();
-  setAddress(ADDRESS_0, PIPE_0); 
+  radio.begin();
+  radio.openReadingPipe(0, endereco[ADDRESS_0]); 
+  radio.setPALevel(RF24_PA_HIGH);
 }
 
 void loop() {
