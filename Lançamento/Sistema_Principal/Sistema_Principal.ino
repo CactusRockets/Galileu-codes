@@ -49,6 +49,5 @@ void loop() {
         message.toCharArray(str, 32);
 
         bool teste = sendMessage(str);
-        Serial.println(teste);
     }
 }
