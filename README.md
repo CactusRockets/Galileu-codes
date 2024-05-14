@@ -1,2 +1,1 @@
-## Códigos para o sistema de telemetria e armazenamento da Cactus Rockets Design
-[Relatório completo do código principal e dos testes realizados](https://docs.google.com/document/d/1UoDRKfpeP2GsuPhDqQyflTXYpGQoQ2ufPVH2wwS2MXQ/edit?usp=sharing).
+# Códigos usados para a aviônica do foguete Galileu
